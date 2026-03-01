@@ -38,7 +38,6 @@ def register(request):
         if password != confirm_password:
             messages.error(request, "Passwords don't match!")
             return render(request, "register.html")
-        
         '''below if statement will check unique usernames so that an account can't be created with same username twice.'''
         if User.objects.filter(email=email).exists() and User.objects.filter(
                 username=username).exists():
@@ -67,9 +66,15 @@ def register(request):
         '''
         the below function will login user when userr is created.
         '''
-        login(request, user)
-        messages.success(request, "Account created and logged in succesfully!")
-        return redirect("home:homepage")
+        try:
+            auth_login(request, user)
+            messages.error(request,
+                             "Account created and logged in succesfully!")
+            return redirect("home:homepage")
+        except Exception as e:
+            messages.error(request, "User is created but error in login")
+            return redirect('home:login')
+
     else:
         return render(request, "register.html")
 
