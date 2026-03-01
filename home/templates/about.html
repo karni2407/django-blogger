@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}About | My Blog{% endblock %}
+
+{% block content %}
+
+<!-- HERO / PAGE HEADER -->
+<section class="relative bg-gradient-to-b from-black via-gray-900 to-black text-white">
+    <div class="max-w-4xl mx-auto px-6 py-32 text-center">
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight mb-6">
+            About MyBlog
+        </h1>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+            MyBlog is a structured platform where technology, growth, and disciplined thinking 
+            come together to provide insightful articles and practical guidance for developers 
+            and thinkers alike.
+        </p>
+    </div>
+</section>
+
+<!-- ABOUT SECTIONS -->
+<section class="bg-black text-white py-24">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+
+        <!-- Card 1 -->
+        <div class="group relative p-8 rounded-2xl 
+                    bg-white/5 backdrop-blur-xl 
+                    border border-white/10 
+                    hover:border-white/40
+                    transition duration-500">
+
+            <h3 class="text-xl font-semibold mb-4">Our Mission</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                We aim to create clear, actionable content that helps developers and thinkers 
+                grow their skills, make better decisions, and approach problems in a structured way.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="group relative p-8 rounded-2xl 
+                    bg-white/5 backdrop-blur-xl 
+                    border border-white/10 
+                    hover:border-white/40
+                    transition duration-500">
+
+            <h3 class="text-xl font-semibold mb-4">Our Vision</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                To be the go-to resource for structured thinking and technology insights, 
+                providing a minimalist, distraction-free reading experience.
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="group relative p-8 rounded-2xl 
+                    bg-white/5 backdrop-blur-xl 
+                    border border-white/10 
+                    hover:border-white/40
+                    transition duration-500">
+
+            <h3 class="text-xl font-semibold mb-4">Our Values</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                Clarity, minimalism, practicality, and consistency. Every article and design 
+                choice reflects these principles.
+            </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="group relative p-8 rounded-2xl 
+                    bg-white/5 backdrop-blur-xl 
+                    border border-white/10 
+                    hover:border-white/40
+                    transition duration-500">
+
+            <h3 class="text-xl font-semibold mb-4">Who We Serve</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                Developers, designers, thinkers, and anyone who wants a clean, structured, 
+                distraction-free space to learn and grow.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+<nav class="fixed top-0 left-0 w-full z-40 bg-black/60 backdrop-blur-lg border-b border-white/10">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <a href="/" 
+       class="text-xl font-semibold tracking-wide text-white hover:text-gray-300 transition duration-300">
+      MyBlog
+    </a>
+
+    <!-- Links -->
+    <ul class="hidden md:flex items-center space-x-10 text-sm font-medium">
+      <li>
+        <a href="/" 
+           class="relative text-gray-300 hover:text-white transition duration-300 
+                  after:content-[''] after:absolute after:left-0 after:-bottom-1 
+                  after:w-0 after:h-[2px] after:bg-white 
+                  after:transition-all after:duration-300 hover:after:w-full">
+          Home
+        </a>
+      </li>
+
+      <li>
+        <a href="#" 
+           class="relative text-gray-300 hover:text-white transition duration-300 
+                  after:content-[''] after:absolute after:left-0 after:-bottom-1 
+                  after:w-0 after:h-[2px] after:bg-white 
+                  after:transition-all after:duration-300 hover:after:w-full">
+          Articles
+        </a>
+      </li>
+
+      <li>
+        <a href="{% url 'home:about' %}" 
+           class="relative text-gray-300 hover:text-white transition duration-300 
+                  after:content-[''] after:absolute after:left-0 after:-bottom-1 
+                  after:w-0 after:h-[2px] after:bg-white 
+                  after:transition-all after:duration-300 hover:after:w-full">
+          About
+        </a>
+      </li>
+    </ul>
+
+    <!-- Auth Button -->
+    <div>
+      {% if user.is_authenticated %}
+        <a href="{% url 'home:logout' %}" 
+           class="bg-[#f6b6b6] hover:bg-[#f3a8a8] text-[#222] font-semibold px-4 py-2 rounded-xl transition">
+          Logout
+        </a>
+      {% else %}
+        <a href="{% url 'home:login' %}" 
+           class="bg-[#b6e3b0] hover:bg-[#a9d8a2] text-black font-semibold px-4 py-2 rounded-xl transition">
+          Login
+        </a>
+      {% endif %}
+    </div>
+
+  </div>
+</nav>
